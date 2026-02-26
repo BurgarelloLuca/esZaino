@@ -7,18 +7,19 @@
         {
             int pesoOttimo = 0;
             List<int> soluzioneOttima = new List<int>();
-            int[] valori = { 11, 13, 7, 21, 40 };
-            if (valori.Length < 0)
+            int[] pesi = { 11, 13, 7, 21, 40 };
+            int[] 
+            if (pesi.Length < 0)
                 throw new Exception("non ci sono valori");
             if (capacitaMassima <= 0)
                 throw new Exception("Capacità non valida!");
             Zaino zaino = new Zaino(0, 0, new List<int>());
             Nodo<Zaino> radice = new Nodo<Zaino>(zaino);
-            Naviga(radice, valori, ref pesoOttimo, ref soluzioneOttima);
+            Naviga(radice, pesi, ref pesoOttimo, ref soluzioneOttima);
             Console.WriteLine($"Risultato ottimo: {pesoOttimo}");
             Console.Write("Oggetti Inclusi : ");
             foreach (int indice in soluzioneOttima)
-                Console.Write($"{valori[indice]} ");
+                Console.Write($"{pesi[indice]} ");
         }
 
         static void Naviga(Nodo<Zaino> nodo, int[] valori, ref int pesoOttimo, ref List<int> soluzioneOttima)
