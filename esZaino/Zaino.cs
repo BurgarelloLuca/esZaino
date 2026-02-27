@@ -10,11 +10,13 @@ namespace esZaino
     {
         public int IndiceUltimoOggetto;
         public int PesoAccumulato;
+        public int ValoreAccumulato;
         public List<int> OggettiPresi;
 
-        public Zaino(int indice, int peso, List<int> presi)
+        public Zaino(int indice, int valore, int peso, List<int> presi)
         {
             IndiceUltimoOggetto = indice;
+            ValoreAccumulato = valore;
             PesoAccumulato = peso;
             OggettiPresi = new List<int>(presi);
         }
